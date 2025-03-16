@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Aumente e diminua o tamanho do seu site
+    </p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Foto G">
+    </picture>
+    <p>Testando de trás pra frente</p>
+    <picture>
+        <source media="(min-width: 1050px)" srcset="imagens/foto-g.png" type="image/png">
+        <source media="(min-width: 750px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-p.png" alt="Foto P">
+    </picture>
+
+    <h1>Reproduzindo áudios</h1>
+    <p>Podemos reproduzir áudio com HTML</p>
+    <audio src="midia/happy-mistake.mp3" controls></audio>
+    <p>No entanto, para termos compatibilidade faremos da seguinte forma:</p>
+    <audio controls>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <source src="midia/guanacast-33.aac" type="audio/aac">
+        <p>Seu navegador não suporta o elemento <code>audio</code>.</p>
+    </audio>
+    
+</body>
+</html>
