@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Grandes</title>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        table{
+            width: 400px;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        /* tbody > tr:nth-child(3n-2){
+            background-color: rgb(203, 2, 2);
+        }
+
+        tbody > tr:nth-child(3n-1){
+            background-color: rgb(7, 195, 4);
+        }
+
+        tbody > tr:nth-child(3n){
+            background-color: rgb(1, 34, 222);
+        } */
+
+        tbody > tr:nth-child(even){
+            background-color: rgb(195, 195, 195);
+        }
+        
+        caption{
+            border: 1px solid black;
+            background-color: lightgray;
+            font-size: 1.4em;
+            padding: 15px;
+            font-weight: bold;
+
+        }
+        td, th{
+            border: 1px solid black;
+        }
+
+        td.numero{
+            text-align: right;
+        }
+
+        thead, tfoot{
+            background-color: rgb(63, 63, 63);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com tabelas grandes</h1>
+
+    <!-- 
+        TABLE
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+
+    <table>
+        <caption>População dos Estados do Brasil</caption>
+        <thead>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 100px;">População</th>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="numero">000.000.000</td>
+                </tr>
+                <tfoot>
+                    <th scope="row">Total de Habitantes</th>
+                    <td class="numero">000.000.000</td>
+                </tfoot>
+            </tbody>
+        </thead>
+    </table>
+</body>
+</html>
