@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclando Células</title>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 400px;
+        }
+
+        td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclando Células</h1>
+    <table>
+        <tr>
+            <td colspan="2">A</td>
+            <td rowspan="3">C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>F</td>
+            <!-- <td>G</td> -->
+            <td rowspan="2">H</td>
+        </tr>
+        <tr>
+            <td colspan="2">I</td>
+            <!-- <td>K</td> -->
+        </tr>
+    </table>
+</body>
+</html>
