@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colgroup</title>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        table{
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        caption{
+            background-color: lightgray;
+            border-width: 1px 1px 0px 1px;
+            border-style: solid;
+            padding: 10px;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+
+        .nome{
+            background-color: lightblue;
+        }
+
+        .idade{
+            background-color: lightgreen;
+        }
+
+        .sexo{
+            background-color: lightcoral;
+        }
+
+        .profissao{
+            background-color: rgb(255, 255, 175);
+        }
+    </style>
+</head>
+<body>
+    <h1>Colgroup</h1>
+    <table>
+        <colgroup>
+            <col class="nome">
+            <col class="idade">
+            <col class="sexo">
+            <col class="profissao">
+        </colgroup>
+        <caption>
+            Cadastro de Pessoas
+        </caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
+                <th>Profissão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria</td>
+                <td>25</td>
+                <td>Feminino</td>
+                <td>Desenvolvedora</td>
+            </tr>
+            <tr>
+                <td>João</td>
+                <td>30</td>
+                <td>Masculino</td>
+                <td>Analista de Sistemas</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>28</td>
+                <td>Feminino</td>
+                <td>Gerente de Projetos</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>35</td>
+                <td>Masculino</td>
+                <td>Engenheiro de Software</td>
+            </tr>
+            <tr>
+                <td>Luiza</td>
+                <td>22</td>
+                <td>Feminino</td>
+                <td>Estagiária</td>
+            </tr>
+            <tr>
+                <td>Ricardo</td>
+                <td>40</td>
+                <td>Masculino</td>
+                <td>Diretor</td>
+            </tr>
+        <tfoot>
+            <tr>
+                <th colspan="3">Qtd de Pessoas</th>
+                <td>6</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
