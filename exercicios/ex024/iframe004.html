@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança em Iframes</title>
+</head>
+<body>
+    <h1>Iframes seguro</h1>
+
+    <!--
+    
+    referrerpolicy="no-referrer" - não coletar dados de usuários pelo iframe
+    sandbox="sandbox" - não permitir que o iframe execute scripts, abra janelas, etc. (sandbox)
+    sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals allow-orientation-lock allow-pointer-lock" - permite que o iframe acesse o mesmo domínio, execute scripts, envie formulários, abra janelas e modais, bloqueie a rotação da tela e bloqueie o ponteiro do mouse, mas não pode acessar outros domínios
+    -->
+
+    <h2>Iframes com formulários</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate id unde consequuntur ut, enim adipisci culpa libero reiciendis molestiae nostrum earum ratione et, est, asperiores consequatur doloremque aliquid possimus perspiciatis!</p>
+
+    <iframe src="paginas-extras/cadastro.html" referrerpolicy="no-referrer" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals allow-orientation-lock allow-pointer-lock">
+        <p>Seu navegador não suporta iframes</p>
+    </iframe>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quo voluptate molestiae in laborum? Quis officiis facere cumque hic voluptatibus, nulla ipsum sapiente temporibus nemo, suscipit voluptas cupiditate voluptate perspiciatis!</p>
+
+    <h2>Iframes com scripts</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptate quisquam a harum itaque natus, nesciunt omnis commodi voluptas exercitationem voluptatem mollitia sunt enim adipisci tempora accusantium quo illum autem!</p>
+
+    <iframe src="paginas-extras/scripts.html" referrerpolicy="no-referrer">
+        <p>Seu navegador não suporta iframes</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor architecto eaque dolores modi exercitationem explicabo numquam, reprehenderit molestiae expedita. Sequi sint placeat aliquam! Explicabo obcaecati dolor perspiciatis dolorem animi rem!</p>
+</body>
+</html>
