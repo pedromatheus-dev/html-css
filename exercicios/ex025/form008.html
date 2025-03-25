@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendo Output</title>
+</head>
+<body>
+    <h1>Vendo Output</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="in1">Número 1:</label>
+            <input type="number" name="n1" id="in1" placeholder="Número 1" min="0" max="10" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Número 2:</label>
+            <input type="number" name="n2" id="in2" placeholder="Número 2" min="0" max="10" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma:</label>
+            <output id="isoma">0</output>
+        </p>
+        <p>
+            <label for="inivel">Nível de Satisfação: </label>
+            <output name="saida" id="isaida">0</output> <br>
+            <input type="range" name="nivel" id="inivel" min="0" max="10" value="0" oninput="isaida.innerHTML = inivel.value">
+        </p>
+        <p>
+            <label for="iano">Ano de Nascimento</label>
+            <input type="number" name="ano" id="iano" placeholder="Ano de Nascimento" min="1900" max="2025" required oninput="calculaIdade()"> <br>
+            <p>Sua idade é: <output id="iidade">0</output></p>
+            
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        function calculaIdade(){
+            let anoAtual = new Date().getFullYear();
+            iidade.innerHTML = anoAtual - Number(iano.value);
+        }
+    </script>
+</body>
+</html>
