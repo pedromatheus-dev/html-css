@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox e Radio</title>
+</head>
+<body>
+    <h1>Checkbox e Radio</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="isexmas" value="M" required checked>
+                <label for="isexmas">Masculino</label><br>
+                <input type="radio" name="sexo" id="isexfem" value="F" required>
+                <label for="isexfem">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+                <!-- <input type="checkbox" name="esporte[]" id="iesporte1" value="Futebol">
+                <label for="iesporte1">Futebol</label><br>
+                <input type="checkbox" name="esporte[]" id="iesporte2" value="Basquete">
+                <label for="iesporte2">Basquete</label><br>
+                <input type="checkbox" name="esporte[]" id="iesporte3" value="Voleibol">
+                <label for="iesporte3">Voleibol</label><br> -->
+
+                <input type="checkbox" name="espfut" id="iespfut" value="Futebol" checked>
+                <label for="iespfut">Futebol</label><br>
+                <input type="checkbox" name="espbas" id="iespbas" value="Basquete">
+                <label for="iespbas">Basquete</label><br>
+                <input type="checkbox" name="espvol" id="iespvol" value="Vôlei" checked>
+                <label for="iespvol">Vôlei</label><br>
+                <input type="checkbox" name="espnat" id="iespnat" value="Natação">
+                <label for="iespnat">Natação</label><br>
+                <input type="checkbox" name="espfuts" id="iespfuts" value="Futsal">
+                <label for="iespfuts">Futsal</label>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
