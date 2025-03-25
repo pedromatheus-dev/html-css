@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select, datalist e textarea</title>
+</head>
+<body>
+    <h1>Select, datalist e textarea</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iestado">Estado:</label>
+            <select name="estado" id="iestado">
+                <option value="Escolha" selected>--- Escolha ---</option>
+                <optgroup label="Nordeste" >
+                    <option value="CE">Ceará</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+
+                <optgroup label="Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="ES">Espírito Santo</option>
+                </optgroup>
+
+            </select>
+        </p>
+
+        <p>
+            <label for="iprofissao">Profissão:</label>
+            <input type="text" name="profissao" id="iprofissao" list="profissoes" placeholder="Digite sua profissão">
+            <datalist id="profissoes">
+                <option value="Professor">Professor</option>
+                <option value="Engenheiro">Engenheiro</option>
+                <option value="Médico">Médico</option>
+                <option value="Bombeiro">Bombeiro</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="iobservacao">Observação: </label><br>
+            <textarea name="Observacao" id="observacao" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
