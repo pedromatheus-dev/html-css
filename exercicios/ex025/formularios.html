@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            font-size: 1.2em;
+
+            /* margin: auto; */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container{
+            margin: auto;
+            background-color: #9b9b9b6c;
+            width: 350px;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #0000003c;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.132);
+        }
+
+        form, fieldset{
+            margin: 10px auto 0px auto;
+        }
+
+        form > p{
+            text-align: center;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #333;
+            color: white;
+            font-size: 1.1em;
+            padding: 10px;
+        }
+
+        input{
+            background-color: #f4f4f4;
+            border: 1px solid   #ccc;
+        }
+
+        fieldset {
+            border: 1px solid #000;
+            padding: 10px;
+            width: 300px;
+        }
+
+        legend{
+            padding: 0px 10px;
+            border: 1px solid #0000001a;
+            border-radius: 5px;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <h1>Todos os tipos de formulários</h1>
+    <div class="container">
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="ifoto-perfil">Foto de Perfil:</label> <br>
+                <input type="file" name="foto-perfil" id="ifoto-perfil" accept="image/*" required> <br> <br>
+                <label for="inome">Nome:</label> <br>
+                <input type="text" name="nome" id="inome" placeholder="Nome Completo" maxlength="50" autocomplete="name" required> <br> <br>
+                <label for="ianonasc">Data de Nascimento:</label> <br>
+                <input type="date" name="anonasc" id="ianonasc" required> <br> <br>
+                <fieldset>
+                    <legend>Contato</legend>
+                        <label for="telefone">Telefone:</label> <br>
+                        <input type="tel" name="telefone" id="itelefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" pattern="\(\d{2}\) \d{5}-\d{4}" required> <br> <br>
+                        <label for="iemail">Email:</label> <br>
+                        <input type="email" name="email" id="iemail" placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> <br> <br>
+                        <label for="iendereco">Endereço:</label> <br>
+                        <input type="text" name="endereco" id="iendereco" placeholder="Rua, Número, Bairro" maxlength="100" required> <br> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <input type="radio" name="sexo" id="imasc" value="masculino" required>
+                    <label for="imasc">Masculino</label> <br>
+                    <input type="radio" name="sexo" id="ifem" value="feminino" required>
+                    <label for="ifem">Feminino</label> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Dados Sensíveis</legend>
+                    <label for="icpf">CPF:</label> <br>
+                    <input type="text" name="cpf" id="icpf" placeholder="000.000.000-00" maxlength="11" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required> <br> <br>
+                    <label for="isenha">Senha</label> <br>
+                    <input type="password" name="senha" id="isenha" placeholder="Senha" maxlength="20" required> <br> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Disciplinas Favoritas</legend>
+                    <input type="checkbox" name="disciplinas[]" id="imatematica" value="matematica">
+                    <label for="imatematica">Matemática</label> <br>
+                    <input type="checkbox" name="disciplinas[]" id="ihistoria" value="historia">
+                    <label for="ihistoria">História</label> <br>
+                    <input type="checkbox" name="disciplinas[]" id="iquimica" value="quimica">
+                    <label for="iquimica">Química</label> <br>
+                    <input type="checkbox" name="disciplinas[]" id="ifisica" value="fisica">
+                    <label for="ifisica">Física</label> <br>
+                    <input type="checkbox" name="disciplinas[]" id="iinformatica" value="informatica">
+                    <label for="iinformatica">Informática</label> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Período Atual</legend>
+                    <label for="iperiodo">Selecione seu período:</label> <br>
+                    <input type="month" name="periodo" id="iperiodo" required> <br> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Cor Favorita</legend>
+                    <label for="icor">Cor: </label>
+                    <input type="color" name="cor" id="icor" value="#000000" required oninput="corescolhida.innerHTML = icor.value">
+                    <output id="corescolhida">#000000</output> <br> <br>
+                    <label for="icores">Escolha sua cor: </label>
+                    <select name="cores" id="icores">
+                        <option value="Amarelo">Amarelo</option>
+                        <option value="Vermelho">Vermelho</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Verde">Verde</option>
+                    </select> <br> <br>
+                    <label for="ioutrascores">Digite sua cor</label>
+                    <input type="text" name="outrascores" id="ioutrascores" placeholder="Outra cor" maxlength="20" list="outrascoreslist" required> <br> <br>
+                    <datalist id="outrascoreslist">
+                        <option value="Preto">
+                        <option value="Branco">
+                        <option value="Rosa">
+                        <option value="Laranja">
+                        <option value="Roxo">
+                        <option value="Cinza">
+                </fieldset>
+                <fieldset>
+                    <legend>Outras informações</legend>
+                    <label for="ihora">Que horas você acorda:</label>
+                    <input type="time" name="hora" id="ihora" required> <br> <br>
+                    <label for="iavaliacao">Como você nos avalia (0-10)</label> <br>
+                    <input type="range" name="avaliacao" id="iavaliacao" min="0" max="10" value="5" oninput="saida.innerHTML = iavaliacao.value" required>
+                    <output id="saida">5</output> <br> <br>
+                    <label for="ifaleconosco">Fale mais sobre a gente:</label> <br>
+                    <textarea name="faleconosco" id="ifaleconosco" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
+                </fieldset>
+            </fieldset>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+    </div>
+</body>
+</html>
