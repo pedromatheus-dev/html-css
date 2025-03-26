@@ -4,65 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-    <style>
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-            font-size: 1.2em;
-
-            /* margin: auto; */
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .container{
-            margin: auto;
-            background-color: #9b9b9b6c;
-            width: 350px;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #0000003c;
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.132);
-        }
-
-        form, fieldset{
-            margin: 10px auto 0px auto;
-        }
-
-        form > p{
-            text-align: center;
-        }
-
-        input[type="submit"], input[type="reset"] {
-            background-color: #333;
-            color: white;
-            font-size: 1.1em;
-            padding: 10px;
-        }
-
-        input{
-            background-color: #f4f4f4;
-            border: 1px solid   #ccc;
-        }
-
-        fieldset {
-            border: 1px solid #000;
-            padding: 10px;
-            width: 300px;
-        }
-
-        legend{
-            padding: 0px 10px;
-            border: 1px solid #0000001a;
-            border-radius: 5px;
-        }
-
-    
-    </style>
 </head>
 <body>
     <h1>Todos os tipos de formulários</h1>
@@ -79,11 +20,11 @@
                 <fieldset>
                     <legend>Contato</legend>
                         <label for="telefone">Telefone:</label> <br>
-                        <input type="tel" name="telefone" id="itelefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" pattern="\(\d{2}\) \d{5}-\d{4}" required> <br> <br>
+                        <input type="tel" name="telefone" id="itelefone" placeholder="(xx) xxxxx-xxxx" maxlength="15" pattern="\(\d{2}\) \d{5}-\d{4}" autocomplete="tel"required> <br> <br>
                         <label for="iemail">Email:</label> <br>
-                        <input type="email" name="email" id="iemail" placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> <br> <br>
+                        <input type="email" name="email" id="iemail" placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="email" required> <br> <br>
                         <label for="iendereco">Endereço:</label> <br>
-                        <input type="text" name="endereco" id="iendereco" placeholder="Rua, Número, Bairro" maxlength="100" required> <br> <br>
+                        <input type="text" name="endereco" id="iendereco" placeholder="Rua, Número, Bairro" maxlength="100" autocomplete="street-address" required> <br> <br>
                 </fieldset>
                 <fieldset>
                     <legend>Sexo</legend>
@@ -95,7 +36,7 @@
                 <fieldset>
                     <legend>Dados Sensíveis</legend>
                     <label for="icpf">CPF:</label> <br>
-                    <input type="text" name="cpf" id="icpf" placeholder="000.000.000-00" maxlength="11" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required> <br> <br>
+                    <input type="text" name="cpf" id="icpf" placeholder="000.000.000-00" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required> <br> <br>
                     <label for="isenha">Senha</label> <br>
                     <input type="password" name="senha" id="isenha" placeholder="Senha" maxlength="20" required> <br> <br>
                 </fieldset>
