@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+header h1{
+    text-align: center;
+    margin: 20px;
+}
+
+menu{
+    display: none;
+}
+
+main{
+    margin: 20px auto;
+    width: 500px;
+}
+
+main h2{
+    margin: 20px 0px;
+}
+
+section::after{
+    content: 'Jornal impresso por Curso em Video';
+}
