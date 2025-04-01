@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralizando com Flexbox</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            background-color: #edcbcb;
+        }
+
+        main{
+            background-color: rgb(154, 214, 154);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        section{
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        
+        h1{
+            text-align: center;
+            border: 1px solid rgb(255, 0, 0);
+            margin: 10px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Tela de Login1</h1>
+            <h1>Tela de Login2</h1>
+        </section>
+        <section>
+            <h1>Tela de Login3</h1>
+            <h1>Tela de Login4</h1>
+        </section>
+    </main>
+</body>
+</html>
