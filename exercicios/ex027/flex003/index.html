@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+         /* 
+            Flex direction: row
+            main-axis (direita para esquerda)
+            main-start - main-end
+            Flex direciton: column
+            main-axis (cima para baixo)
+            main-start - main-end
+            Flex direction: row-reverse
+            main-axis (esquerda para direita)
+            main-end - main-start
+            Flex direciton: column-reverse
+            main-axis (baixo para cima)
+            main-end - main-start
+        */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: monospace;
+            font-size: 1.3em;
+        }
+
+        h1{
+            text-align: center;
+            background-color: rgb(64, 64, 64);
+            color: white;
+            padding: 10px;
+        }
+
+        .container{
+            display: flex;
+            background-color: brown;
+            flex-flow: row wrap;
+        }
+
+        .item{
+            padding: 20px;
+            text-align: center;
+            flex: auto;
+            background-color: lightcyan;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex direction: row</h1>
+       
+    <div class="container fdr nw">
+        <div class="item fa">Conteúdo do bloco A</div>
+        <div class="item fa">Conteúdo do bloco B</div>
+        <div class="item fa">Conteúdo do bloco C</div>
+        <div class="item fa">Conteúdo do bloco D</div>
+        <div class="item fa">Conteúdo do bloco E</div>
+        <div class="item fa">Conteúdo do bloco F</div>
+    </div>
+</body>
+</html>
