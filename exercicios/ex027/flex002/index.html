@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+        /* 
+            Flex direction: row
+            main-axis (direita para esquerda)
+            main-start - main-end
+            Flex direciton: column
+            main-axis (cima para baixo)
+            main-start - main-end
+            Flex direction: row-reverse
+            main-axis (esquerda para direita)
+            main-end - main-start
+            Flex direciton: column-reverse
+            main-axis (baixo para cima)
+            main-end - main-start
+        */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            background-color: salmon;
+            flex-direction: row-reverse;
+        }
+
+        .item{
+            padding: 20px;
+            text-align: center;
+            background-color: lightcyan;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+    </div>
+</body>
+</html>
